@@ -1,5 +1,6 @@
 package com.it;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -29,7 +30,9 @@ public class MyTest {
   /*    validLogin=ittest2
         validPassword=337774a
         validEmail=ittest2@i.ua*/
-       
+   driver.get("https://www.i.ua/");
+   driver.findElement(By.name("login")).sendKeys("ittest2");
+   driver.findElement(By.name("login")).sendKeys("ittest2");
 
     }
 }

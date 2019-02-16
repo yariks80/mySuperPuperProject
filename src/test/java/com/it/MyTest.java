@@ -1,5 +1,7 @@
 package com.it;
 
+import com.it.pages.DashBord;
+import com.it.pages.LoginPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -30,11 +32,9 @@ public class MyTest {
         validPassword=337774a
         validEmail=ittest2@i.ua*/
         driver.get("https://www.i.ua/");
-        driver.findElement(By.name("login")).sendKeys("ittest2");
-        driver.findElement(By.name("pass")).sendKeys("337774a");
-        driver.findElement(By.xpath("//input[@tabindex='5']")).click();
-        String email = driver.findElement(By.xpath("//span[@class='sn_menu_title']")).getText();
-        Assert.assertEquals(email, "ittest2@i.ua");
+        new LoginPage(driver).login("ittest2", "337774a");
+        String userEmail = new DashBord(driver).getUserEmail();
+        Assert.assertEquals(userEmail, "ittest2@i.ua");
 
     }
 }

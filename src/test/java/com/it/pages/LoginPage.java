@@ -1,11 +1,9 @@
 package com.it.pages;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class LoginPage  extends BasePage{
 
 	@FindBy(name = "login")
 	private WebElement inputUserName;
@@ -16,9 +14,7 @@ public class LoginPage {
 	@FindBy(xpath = "//input[@tabindex='5']")
 	private WebElement btnLogin;
 
-	public LoginPage(WebDriver driver) {
-		PageFactory.initElements(driver,this);
-	}
+
 
 
 	public void login(String userName, String password) {

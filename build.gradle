@@ -19,3 +19,9 @@ dependencies {
 
 
 }
+task testChrome(type:Test){
+    useTestNG {
+        suites "testNg.xml"
+    }
+}
+

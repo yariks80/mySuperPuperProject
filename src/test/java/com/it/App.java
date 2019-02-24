@@ -1,5 +1,6 @@
 package com.it;
 
+import com.it.emun.Page;
 import com.it.helpers.CommonHelper;
 import com.it.helpers.DashBordHelper;
 import com.it.helpers.LoginHelper;
@@ -13,5 +14,16 @@ public class App {
         common= new CommonHelper();
         login =new LoginHelper();
         dashBord=new DashBordHelper();
+    }
+
+    public void goTo(Page page) {
+        switch (page) {
+            case LOGIN:
+                break;
+            case DASHBORD:
+                break;
+
+        }
+
     }
 }
